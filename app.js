@@ -1,5 +1,7 @@
 require('dotenv').config();
 const express = require('express');
+const http = require('http');
+const fs = require('fs');
 //initializing express
 const app = express();
 
@@ -14,10 +16,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended :true}));
 app.use(express.static("images"));
+app.use(express.static('public'));
 
 // PORT
 const port = process.env.PORT || 5000;
 
+app.get('/index',function(req,res) {
+    res.sendFile(__dirname + '/public/index.html');
+  });
 //DB connection
 mongoose.connect(process.env.DB, {
     useNewUrlParser:true,
@@ -37,6 +43,6 @@ if(process.env.NODE_ENV === 'production'){
     });
 }
 
-// Starting a server
+
 app.listen(port, () => {console.log(`app is running at ${port}`)}
 );

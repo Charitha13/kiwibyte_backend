@@ -55,7 +55,7 @@ module.exports = class API {
         newTopic.photo = new_photo;
         try{
             await Topic.findByIdAndUpdate(id, newTopic);
-            res.status(200).json({message: "Topic Updated Successfuly"});
+            res.status(200).json({message: "Topic Updated Successfully"});
 
         }catch(err){
             res.status(404).json({message: err.message});

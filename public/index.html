@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo_KiwiByte.PNG">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <title>KiwiByte</title>
+</head>
+<body>
+    <div id="kiwidiv">
+    <img src="./images/kiwibyte_dark.PNG" id="kiwi" alt="KiwiByte">
+</div>
+    <br>    <br>
+    <div id="imagesfloat">
+    <img id="img1" src="./images/artificial-intelligence-g941af1cad_1280.jpg" style="display: none">
+    <img id="img2" src="./images/database-gdf87b6ff4_1280.jpg" style="display: none">
+    <img id="img3" src="./images/mobile-phone-g08bbd576e_1280.jpg" style="display: none">
+</div>
+    <h2 class="bodytext">Hello There,</h2><h3 class="bodytext">Wanna learn about the technical topics that you do not know and have a clear understanding about it?<br>
+        <br>
+    You have come to the right place.<br><br>
+Please consider that this is a new development and we are trying to add as many topics as we could soon and we will keep the content 
+in the page up to date. <br><br>
+If you wanna learn about a topic and couldn't find it on our page, do not hesitate to send me an email that you can find in the contact page
+and we will do our research and upload the article in our page and will notify you.<br>
+We would me more than happy to help you!!</h3>
+<h2 id="thankyou"> Thank You for supporting Us!!!</h2>
+<h3 class="bodytext">Please click on the button below to access our articles. Have a happy blogging!!</h3>
+    <a href="https://sleepy-chamber-38742.herokuapp.com/home/" id="blog"> <button id="buttonblog"><img src="./images/blog_backgroud.jpg" style=" height: 10%; width: 90%;" > </button></a>
+    <footer class="foot">
+        <a href="https://github.com/Charitha13/" target="_blank" rel="noopener" aria-label="GitHub"><img src="./images/git2.png" id="gitimg" alt="github" ></a>
+        <a href="https://www.linkedin.com/in/charitha-sree-jayaramireddy-851237163/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="./images/linkedin.png" id="linkedinimg" alt="Linkedin" ></a>
+        <p id="contactme">  &emsp;&emsp;&emsp;Contact Me<br><br>
+            charithareddy13@gmail.com<br>
+            &nbspcjaya1@unh.newhaven.edu
+        </p> 
+        
+    
+    </footer>
+</body>
+<script type="text/javascript">
+    window.onload = function(){
+        window.displayImgCount = 0;
+        function loopImage(){
+            if (displayImgCount !== 0) {
+                document.getElementById("img" + displayImgCount).style.display = "none";
+            }
+            displayImgCount = displayImgCount === 3 ? 1 : displayImgCount + 1;
+            document.getElementById("img" + displayImgCount).style.display = "block";
+            setTimeout(loopImage, 2000);
+        }
+        loopImage();
+    }
+</script>
+</html>
